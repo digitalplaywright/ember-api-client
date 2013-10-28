@@ -1,5 +1,6 @@
 import Resolver from 'resolver';
 import registerComponents from 'appkit/utils/register_components';
+import Auth from 'appkit/auth';
 
 var App = Ember.Application.extend({
   LOG_ACTIVE_GENERATION: true,
@@ -18,17 +19,9 @@ App.initializer({
   }
 });
 
-Ember.OAuth2.config = {
-  google: {
-    clientId: "xxxxxxxxxxxx",
-    authBaseUri: 'http://localhost:5000/oauth/authorize',
-    redirectUri: 'http://localhost:8000/oauth/callback',
-    scope: 'public write'
-  } 
-} 
 
-Ember.OAuth2.reopen({ onSuccess: function() { return 'hello, onSuccess' } });
-Ember.OAuth2.reopen({ onError: function() { return 'hello, onError' } });
+App.Auth = Auth;
+
 
 
 export default App;

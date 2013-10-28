@@ -6,7 +6,8 @@
     "qunit": "~1.12.0",
     "ember": "1.1.0-beta.2",
     "ember-data-shim": "1.0.0-beta.3",
-    "ember-auth": "~9.0.7"
+    "ember-auth": "~9.0.7",
+    "ember-auth-request-jquery": "~1.0.3"
   },
   "resolutions": {
     "ember": "1.1.0-beta.2"

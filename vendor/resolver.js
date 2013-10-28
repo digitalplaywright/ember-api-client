@@ -86,6 +86,8 @@ define("resolver",
     // supports components with dashes and other stuff with underscores.
     var normalizedModuleName = chooseModuleName(requirejs._eak_seen, moduleName);
 
+    //console.log("lookup", parsedName, normalizedModuleName);
+
     if (requirejs._eak_seen[normalizedModuleName]) {
       var module = require(normalizedModuleName, null, null, true /* force sync */);
 
